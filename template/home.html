@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home page</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #f2f2f2, #fff);
+            margin-top: 1em;
+            padding-left: 4em;
+        }
+
+        ul {
+            list-style: circle;
+        }
+
+        a {
+            color: blue;
+            text-decoration: none;
+        }
+
+        .h1 {
+            font-family: "charter";
+            font-weight: 700;
+            font-size: 2.5em;
+        }
+    </style>
+</head>
+<body>
+<div class="container text-center">
+    <div class="row">
+        <div class="col">
+            &nbsp;
+        </div>
+        <div class="col">
+            <div class="h1">Posts</div>
+            <div class="post-list">
+                <ul class="list-group">
+                    {{range .Data}}
+                    <li class="list-group-item"><a href="/post/{{.Title}}">{{.Title}}</a></li>
+                    {{end}}
+                </ul>
+            </div>
+        </div>
+        <div class="col">
+            &nbsp;
+        </div>
+    </div>
+</div>
+</body>
+</html>
